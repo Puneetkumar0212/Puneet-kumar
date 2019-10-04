@@ -1,1 +1,81 @@
-bolo bharat mata ki mai
+<html>
+<head>
+<title>
+JAI PUBG
+
+</title>
+</head>
+
+
+<body>
+<form>
+<h1>User details </h1>
+Email:<input type="text" id=email><br><br>
+Password:<input type="password"id=pwd><br><br>
+<button type="button" onclick="login_details(
+document.getElementById('email').value,
+
+document.getElementById('pwd').value)">submit</button>
+
+</form>
+<script>
+function login_details(email,pwd)
+{
+var users=[ {
+email:'ramukaka@gmail.com',
+pwd:12345 
+},
+{
+email:'heroaalom@gmail.com',
+pwd:123456 
+},
+{
+email:'depakkalal@gmail.com',
+pwd:1234567 ,
+}]
+
+var isPwdCorrect=false 
+var isUserFound=false
+for(currentUser in users)
+{
+ 
+if (users[currentUser]['email']==email)
+     {
+        if(users[currentUser]['pwd']==pwd)
+
+        {
+           isPwdCorrect=true
+           isUserFound=true
+           break
+        }
+      else
+     {
+        isUserFound=true
+        break
+     }
+     }
+       else
+       isUserFound=false
+
+    }
+if(isUserFound==true && isPwdCorrect==true)
+{
+alert("YOU ARE LOGGED IN");
+}
+
+else if(isUserFound==true && isPwdCorrect==false)
+{
+alert("nikal laude")
+}
+else
+{
+alert("invalid user")
+}
+}
+
+    </script>
+
+</body>
+
+</html>
+ 
